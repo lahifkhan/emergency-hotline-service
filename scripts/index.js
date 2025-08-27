@@ -28,6 +28,23 @@ getElement("card-container").addEventListener("click",function(event){
         if(numberOfCoin>=20){
              getElement("coin-count").innerText = numberOfCoin-20;
              alert(`📞 Calling ${serviceName} ${serviceNumber}...`);
+            time = new Date().toLocaleTimeString();
+            let historyContainer = getElement("history-container");
+            let div = document.createElement("div");
+            div.innerHTML=`
+              <div class="flex justify-between items-center bg-[#fafafa] px-3 py-4 rounded-lg shadow-lg">
+                <div >
+                    <p class="text-lg font-semibold">${serviceHeadlineName}</p>
+                    <p class="text-[#5c5c5c]">${serviceNumber}</p>
+                </div>
+                <div>
+                    <p>${time}</p>
+                </div>
+            </div>
+
+            `
+            historyContainer.appendChild(div);
+
 
         }
         else{
