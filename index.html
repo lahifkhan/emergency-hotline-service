@@ -390,7 +390,30 @@
 
         <!-- history section -->
         <div class="aside md:col-span-3 bg-white rounded-xl">
-         
+            <div class="flex justify-between items-center mt-2 p-2">
+            <div class="flex gap-2">
+                <img src="assets/clock.svg" alt=""> 
+                <p class="text-xl font-medium">Call History</p>
+            </div>
+            <button
+             id="clear-btn" class="px-9 py-3 bg-[#00a63e] text-white font-semibold rounded-3xl"
+            >
+             Clear
+            </button>
+          </div>
+
+          <div id="history-container" class="space-y-4 mt-2">
+            <div class="flex justify-between items-center bg-[#fafafa] px-2 py-4 rounded-lg shadow-lg">
+                <div >
+                    <p class="text-lg font-semibold">Fire Service Number</p>
+                    <p class="text-[#5c5c5c]">999</p>
+                </div>
+                <div>
+                    <p>11:36:58 AM</p>
+                </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
