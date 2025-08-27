@@ -51,8 +51,22 @@ getElement("card-container").addEventListener("click",function(event){
             alert("❌ You don't have enough coins. It takes at least 20 coins to make a call.")
         }
 
-        
 
+    }
+
+     // copies functionality 
+    if(event.target.closest(".copy-btn")){
+        const copyBtn = event.target.closest(".copy-btn");
+         const serviceNumber = copyBtn.parentNode.parentNode.children[1].children[2].innerText;
+         console.log(serviceNumber);
+
+       const copyCount = Number( getElement("copy-count").innerText);
+       getElement("copy-count").innerText = copyCount+1;
+
+         navigator.clipboard.writeText(serviceNumber)
+         .then(()=>{
+            alert(`Number has been copied:${serviceNumber}`);
+         })
 
 
     }
