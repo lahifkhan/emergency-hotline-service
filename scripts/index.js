@@ -74,3 +74,10 @@ getElement("card-container").addEventListener("click",function(event){
     
 
 })
+
+
+// clear button functionality 
+getElement("clear-btn").addEventListener("click",function(){
+     let historyContainer = getElement("history-container");
+     historyContainer.innerHTML="";
+})
